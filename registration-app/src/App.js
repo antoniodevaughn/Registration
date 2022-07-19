@@ -1,20 +1,22 @@
 
 //Login.js
+import Stack from '@mui/material/Stack';
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { Paper, TextField, Button, Typography, Link } from "@mui/material";
+import { Paper, TextField, Button, Typography, Link, Checkbox,FormControlLabel } from "@mui/material";
 
 const Login=()=> {
     const paperStyle={
         padding: "20px",
-        height: "100vh",
+        height: "90vh",
         width: 600,
         margin: "20px auto"
     }
 
     const btnstyle={
-        margin:"8px 0",
-        borderRadius: 25
+        
+        borderRadius: 25,
+        
     }
         const textfield={
             margin: "10px"
@@ -43,11 +45,39 @@ const Login=()=> {
         <TextField label="Password (case sensitive)" placeholder="Enter Password" type="password" fullWidth required></TextField>
         <p></p>
         <TextField label="Confirm Password" placeholder="Enter Confirm Password" type="Confirm Password" fullWidth required></TextField>    
-        
+       <p></p>
+       <Stack spacing={10} direction="row">
+        <FormControlLabel
+            control={
+                <Checkbox
+                    name="Checked"
+                    color="primary"
+            />}
+            label="Donor"
+            />
+            <p></p>
+            <FormControlLabel
+            control={
+                <Checkbox
+                    name="Checked"
+                    color="primary"
+            />}
+            label="NCC Staff"
+            />
+            <p></p>
+            <FormControlLabel
+            control={
+                <Checkbox
+                    name="Checked"
+                    color="primary"
+            />}
+            label="Case Manager"
+            />
+            </Stack>
             <p></p>
             
-
-
+            <p></p>
+            
             <Button
                 type="Submit"
                 color="primary"
@@ -55,21 +85,21 @@ const Login=()=> {
                 style={btnstyle}
                 fullWidth
                 >
-                   Confirm
+                   Register
             </Button>
-            
+           
 
                 <Typography style={textfield}>
                     <Link href= "#">
                     <Grid align = "center">
+                   
                    
                     </Grid>
                         
                     </Link>
               
             </Typography>
- 
- 
+            
             
             
         </Paper>
